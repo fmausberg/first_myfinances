@@ -7,11 +7,12 @@ VALUES
 	('McDonalds', NULL),
 	('Sparkasse', NULL),
 	('Paypal', NULL),
-	('Mausberg', 'Paul');
+	('Mausberg', 'Paul'),
+	('Neusser Weyhe 27', NULL);
 
 INSERT INTO property (name, description, runtime, value_original, value_sold)
 VALUES 
-	('Neusser Weyhe 29', NULL, 400, 136000.00, NULL),
+	('Neusser Weyhe 27', NULL, 400, 136000.00, NULL),
 	('Gartenstraße 33a', NULL, 400, 260000.00, NULL);
 	
 INSERT INTO account (id, position, master_id, acc_name)
@@ -32,14 +33,16 @@ VALUES
 	(14, 1, 8, 'Present'),
 	(15, 1, 3, 'Deka Depot'),
 	(16, 1, 2, 'Accounts Receivables'),
-	(17, 2, 2, 'Deffered Expenses');
+	(17, 2, 2, 'Deffered Items'),
+	(18, 2, 8, 'Depreciation');
 
 INSERT INTO transaction (account_id, value_original, date, reference, partner)
 VALUES
 	(11, 100.00, '2023-01-01', 'Herzlichen Glückwunsch', 'Dr. Paul Mausberg'),
 	(11, -20.00, '2023-01-05', 'Bargeldabhebung', NULL),
 	(11, -30.00, '2023-01-10', 'Paypal Konto Auflanden', 'Felix Mausberg'),
-	(12, 30.00, '2023-01-11', 'Aufladung', 'Felix Mausberg');
+	(12, 30.00, '2023-01-11', 'Aufladung', 'Felix Mausberg'),
+	(12, 9.99, '2023-05-03', 'Geschenk', 'Mausbergs');
 	
 INSERT INTO sentencematurity (id, name)
 VALUES
@@ -55,7 +58,8 @@ VALUES
 	('5 present cash to leona', 1),
 	('7.5 lent cash to spencer', 1),
 	('33 present to dad but not paid', 1),
-	('12 present payout to dad from sparkasse', 1);
+	('12 present payout to dad from sparkasse', 1),
+	('100% loan of Sparkasse to Neubersch', 1);
 	
 INSERT INTO word (sentence_id, account_id, date, value, currency_value, partner_id)
 VALUES
@@ -77,7 +81,14 @@ VALUES
 	(7, 5, '2023-03-02', 33, 'EUR', 8),
 	(7, 4, '2023-03-02', -33, 'EUR', NULL),
 	(8, 5, '2023-04-01', -12, 'EUR', 8),
-	(8, 11, '2023-04-01', -12, 'EUR', NULL);
+	(8, 11, '2023-04-01', -12, 'EUR', NULL),
+	(9, 6, '2023-06-15', 260000, 'EUR', 6),
+	(9, 17, '2023-06-25', 260000, 'EUR', 3),
+	(10, 17, '2023-07-01', 260000, 'EUR', 3),
+	(10, 3, '2023-07-01', 260000, 'EUR', 9),
+	(11, 6, '2023-07-31', -520, 'EUR', 9),
+	(11, 12, '2023-07-31', -520, 'EUR', 9),
+	(11, 4, '2023-07-31', -520, 'EUR', NULL);
 
 INSERT INTO trf_transaction_sentence (sentence_id, transaction_id)
 VALUES
