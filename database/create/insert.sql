@@ -61,12 +61,12 @@ VALUES
 	(8, '12 present payout to dad from sparkasse', 1),
 	(9, '100% loan of Sparkasse to Neubersch', 1),
 	(10, 'transfer of property', 1),
-	(11, 'Deprecitation in July', 1),
-	(12, 'Deprecitation in August', 1),
-	(13, 'Deprecitation in September', 1),
-	(14, 'Deprecitation in October', 1),
-	(15, 'Deprecitation in November', 1),
-	(16, 'Deprecitation in December', 1);
+	(11, 'Depreciation in July', 1),
+	(12, 'Depreciation in August', 1),
+	(13, 'Depreciation in September', 1),
+	(14, 'Depreciation in October', 1),
+	(15, 'Depreciation in November', 1),
+	(16, 'Depreciation in December', 1);
 	
 INSERT INTO word (sentence_id, account_id, date, value, currency_value, partner_id)
 VALUES
