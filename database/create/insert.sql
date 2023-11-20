@@ -48,7 +48,7 @@ VALUES
 	
 INSERT INTO sentence (description, sentencematurity_id)
 VALUES
-  ('100 income by dad on sparkasse', 1),
+	('100 income by dad on sparkasse', 1),
 	('20 cashen', 1),
 	('30 shift to paypal', 1),
 	('30 arrive at paypal', 1),
