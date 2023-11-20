@@ -14,7 +14,9 @@ CREATE TABLE property (
 	description TEXT,
 	runtime INT,
 	value_original DECIMAL(10, 2) NOT NULL,
-	value_sold DECIMAL(10, 2)
+	currency_value_original VARCHAR(3),
+	value_sold DECIMAL(10, 2),
+	currency_value_sold VARCHAR(3)
 );
 
 CREATE TABLE account (
@@ -29,6 +31,7 @@ CREATE TABLE transaction(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	account_id INT,
 	value_original DECIMAL(10, 2),
+	currency_value_original VARCHAR(3),
 	date DATE,
 	reference VARCHAR(255),
 	partner VARCHAR(255),
@@ -51,8 +54,9 @@ CREATE TABLE word (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	sentence_id INT,
 	account_id INT,
-	word_date DATE,
-	word_value DECIMAL(10, 2),
+	date DATE,
+	value DECIMAL(10, 2),
+	currency_value VARCHAR(3),
 	partner_id INT,
 	FOREIGN KEY (sentence_id) REFERENCES sentence(id),
 	FOREIGN KEY (account_id) REFERENCES account(id),
