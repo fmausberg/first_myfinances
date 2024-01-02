@@ -46,7 +46,7 @@ CREATE TABLE sentencematurity (
 CREATE TABLE sentence (
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
 	description VARCHAR(255),
-	sentencematurity_id INT,
+	sentencematurity_id BIGINT,
 	FOREIGN KEY (sentencematurity_id) REFERENCES sentencematurity(id)
 );
 
